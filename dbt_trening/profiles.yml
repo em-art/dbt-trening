@@ -1,0 +1,13 @@
+dbt-tening:
+  outputs:
+    dev:
+      threads: 3
+      type: postgres
+      host: 192.168.1.122
+      port: 5432
+      user: env_var('DB_USER')
+      pass: env_var('DB_PASS')
+      dbname: dwbi
+      schema: public
+
+  target: dev
